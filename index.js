@@ -117,6 +117,10 @@ function toConst(str, type = "camel",snackChar="-") {
   }
 }
 
+function changeExt(name, newExt) {
+  return basename(name) + "." + newExt
+}
+
 module.exports = {
   capitalize,
   basename,
@@ -127,5 +131,6 @@ module.exports = {
   camelToCapitalize,
   capitalizeToCamel,
   capitalizeToSnake,
-  toConst
+  toConst,
+  changeExt
 }
