@@ -104,7 +104,7 @@ function capitalizeToCamel(str) {
   return str[0].toLowerCase() + str.substr(1)
 }
 
-function toConst(str, type = "camel",snackChar="-") {
+function toConst(str, type = "camel",snakeChar="-") {
   switch (type){
     case "camel":
       return _extractSegementsFromCamel(str).map(x=>x.toUpperCase()).join("_")
@@ -112,7 +112,7 @@ function toConst(str, type = "camel",snackChar="-") {
     case "cap":
       return _extractSegementsFromCapitalize(str).map(x=>x.toUpperCase()).join("_")
     case "snake":
-      return _extractSegementsFromSnake(str,snackChar).map(x=>x.toUpperCase()).join("_")
+      return _extractSegementsFromSnake(str,snakeChar).map(x=>x.toUpperCase()).join("_")
       
   }
 }
